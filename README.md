@@ -14,7 +14,7 @@ This project focuses on:
 
 ## 🚀 Live Demo
 👉 Deployed on Vercel:  
-(Add your link here)
+https://leadership-one.vercel.app/
 
 ---
 
