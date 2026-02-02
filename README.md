@@ -105,11 +105,6 @@ Follow prompts → Done ✅
 
 ---
 
-## 📸 Screenshots
-
-(Add your screenshots here)
-
----
 
 ## 🎯 Learning Outcomes
 
