@@ -1,23 +1,23 @@
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
-import NorthStarSection from './components/NorthStarSection'
+import NorthStar from './components/NorthStar'
 import LeadershipSection from './components/LeadershipSection'
-import StatisticsSection from './components/StatisticsSection'
-import TransformSection from './components/TransformSection'
-import Footer from './components/ImpactSection'
+import WhyWeExist from './components/WhyWeExist'
+import HowWeTransform from './components/HowWeTransform'
+import Vision from './components/Vision'
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div>
       <Header />
       <HeroSection />
-      <NorthStarSection />
+      <NorthStar />
       <LeadershipSection />
-      <StatisticsSection />
-      <TransformSection />
-      <Footer />
+      <WhyWeExist />
+      <HowWeTransform />
+      <Vision />
     </div>
-  )
-}
+  );
+};
 
 export default App
