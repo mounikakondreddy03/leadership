@@ -1,52 +1,64 @@
-
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/40 via-emerald-900/30 to-blue-900/40"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(20,184,166,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(37,99,235,0.15),transparent_50%)]"></div>
-      </div>
-      
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <div className="flex justify-between items-center max-w-1/3">
-              <div className="w-2 h-2 bg-white"></div>
-              <span className="text-white/80 text-sm tracking-wider uppercase font-semibold">
+    <section className="relative min-h-screen flex overflow-hidden text-white justify-center items-center">
+
+      {/* ================= BACKGROUND ================= */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#07261a] to-[#0c4f36]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(16,185,129,0.15),transparent_55%)]" />
+
+
+      {/* ================= CONTENT WRAPPER (1080px) ================= */}
+      <div className="relative z-10 w-full max-w-[1080px] mx-auto px-6 flex flex-col">
+
+        {/* ================================================= */}
+        {/* =============== TOP CONTENT (365px) ============== */}
+        {/* ================================================= */}
+
+        <div className="flex flex-col gap-[125px] min-h-[365px] justify-center">
+
+          {/* ---------- LEFT (78px) ---------- */}
+          <div className="flex flex-col items-center lg:items-start gap-2 min-h-[78px] text-center lg:text-left">
+
+            <div className="flex items-center gap-3">
+              <span className="w-2 h-2 bg-white/80" />
+              <span className="uppercase tracking-wider text-white/70 text-xs sm:text-sm font-semibold">
                 Built on Solid Ground
               </span>
             </div>
-            
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight">
+
+            <div className="space-y-2">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
                 Building Leaders –
               </h1>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight">
+
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight">
                 <span className="italic text-white/60">the </span>
-                <span className="text-white">World Can Trust.</span>
+                <span>World Can Trust.</span>
               </h1>
             </div>
           </div>
-          
-          <div className="flex justify-end absolute">
-            <div className="max-w-md">
-              <p className="text-white/90 font-small md:align-text-top leading-relaxed relative left-195 top-50 float-start">
-                Where purpose meets people. Where organizations transform through trusted leadership, continuous learning, & human responsibility.
-              </p>
-            </div>
+
+
+          {/* ---------- RIGHT (162px) ---------- */}
+          <div className="flex justify-center lg:justify-end min-h-[162px] text-center lg:text-left">
+
+            <p className="max-w-[520px] text-white/85 text-base sm:text-lg leading-relaxed md:leading-loose">
+              Where purpose meets people. Where organizations transform through
+              trusted leadership, continuous learning, & human responsibility.
+            </p>
+
           </div>
         </div>
-      </div>
-      
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
-      
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-white/50 rounded-full"></div>
-        </div>
+
+        {/* ================= SCROLL ICON ONLY ================= */}
+       <div className="flex justify-center pb-20">
+
+           <div className="animate-bounce">
+             <div className="w-6 h-10 rounded-full border border-white/30 flex items-start justify-center p-2">
+               <div className="w-[2px] h-3 bg-white/50 rounded-full" />
+             </div>
+           </div>
+         </div>
       </div>
     </section>
   );

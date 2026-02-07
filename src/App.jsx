@@ -10,6 +10,7 @@ function App() {
   return (
     <div>
       <Header />
+      {/* <div className='h-[116px]' /> */}
       <HeroSection />
       <NorthStar />
       <LeadershipSection />
