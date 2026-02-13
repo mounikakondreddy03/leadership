@@ -14,9 +14,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 w-full z-50 backdrop-blur-md border-b shadow-lg border-white/20 bg-[#000000]/50">
 
-      <div className="w-full mx-auto px-6 md:px-10 h-20 flex items-center justify-center lg:justify-between gap-6">
+      <div className="w-full mx-auto px-8 md:px-10 h-20 flex md:items-center justify-center gap-50">
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-between gap-5">
 
           <span className="text-white text-lg md:text-3xl font-semibold italic">
             I.T.L

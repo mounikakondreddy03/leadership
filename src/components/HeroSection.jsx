@@ -14,7 +14,7 @@ const HeroSection = () => {
         {/* =============== TOP CONTENT (365px) ============== */}
         {/* ================================================= */}
 
-        <div className="flex flex-col gap-[125px] min-h-[365px] justify-center">
+        <div className="flex flex-col gap-[125px] min-h-[100px] justify-center">
 
           {/* ---------- LEFT (78px) ---------- */}
           <div className="flex flex-col items-center lg:items-start gap-2 min-h-[78px] text-center lg:text-left">
@@ -51,7 +51,7 @@ const HeroSection = () => {
         </div>
 
         {/* ================= SCROLL ICON ONLY ================= */}
-       <div className="flex justify-center pb-20">
+       <div className="flex justify-center">
 
            <div className="animate-bounce">
              <div className="w-6 h-10 rounded-full border border-white/30 flex items-start justify-center p-2">

@@ -6,101 +6,92 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #0a1929;
-  color: white;
-}
-
-.gradient-bg {
-  background: linear-gradient(180deg, #0a1929 0%, #1e3a5f 50%, #0d4d4d 100%);
-}
-
-.glow {
-  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
-}
-
-.glow-green {
-  box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
-}
-
 :root {
+  /* Refined color palette for seamless transitions */
   --lead-dark-1: #051014;
   --lead-dark-2: #07261a;
   --lead-green-1: #0c3b2c;
   --lead-green-2: #0f5a39;
-  --divider: rgba(255,255,255,0.06);
+  --section-join: #05111a; /* The shared color for seamless joining */
+  --divider: rgba(255, 255, 255, 0.06);
 }
 
-.leadership-section .cell-divider-right {
-  border-right: 1px solid var(--divider);
-}
-.leadership-section .cell-divider-bottom {
-  border-bottom: 1px solid var(--divider);
-}
-
-.leadership-slider {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(980px, 90%);
-  color: rgba(255,255,255,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Matching body background to the section join color for continuity */
+  background-color: var(--lead-dark-1);
+  color: white;
+  overflow-x: hidden;
 }
 
-.leadership-slider .ticks {
-  flex: 1 1 auto;
-  height: 6px;
-  background-image: linear-gradient(90deg, rgba(255,255,255,0.06) 0 10px, transparent 10px);
-  background-size: 20px 6px;
-  margin: 0 12px;
-  border-radius: 3px;
+/* ================================================= */
+/* SEAMLESS SECTION GRADIENTS */
+/* ================================================= */
+
+.gradient-bg-main {
+  /* Flows from the deep green of 'Why We Exist' to the midnight of 'How We Transform' */
+  background: linear-gradient(180deg, #0d3b2e 0%, #051a14 50%, var(--section-join) 100%);
 }
 
-.leadership-small-dot {
-  width: 10px;
-  height: 10px;
-  background: white;
-  opacity: 0.95;
-  border-radius: 2px;
+/* ================================================= */
+/* HEADER & NAVIGATION REFINEMENTS */
+/* ================================================= */
+
+.header-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.dial {
-  background: radial-gradient(circle at 35% 35%, rgba(0,255,200,0.08), transparent 50%), linear-gradient(135deg, rgba(30,144,255,0.1) 0%, rgba(0,212,212,0.05) 100%);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: inset 0 40px 80px rgba(0,0,0,0.3), 0 0 60px rgba(30,144,255,0.15);
+/* Space-saving utilities for laptop views */
+.nav-link-spacing {
+  padding: 0.5rem 1.25rem;
+  letter-spacing: 0.05em;
 }
 
-.dial::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border-radius: 9999px;
-  border: 1px dashed rgba(255,255,255,0.08);
+/* ================================================= */
+/* TIMELINE & METHODOLOGY STYLES */
+/* ================================================= */
+
+/* Custom dotted line for the progress bars */
+.border-dotted-custom {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3) 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
 }
 
-.icon-outer {
-  width: 64px;
-  height: 64px;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-  transition: all 0.3s ease;
+/* Vertical dotted line for tablet/mobile timeline */
+.timeline-line-vertical {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 1px 12px;
+  background-repeat: repeat-y;
 }
-.icon-outer.blue { background: rgba(30,144,255,0.25); border: 2px solid rgba(30,144,255,0.35); box-shadow: 0 8px 24px rgba(30,144,255,0.2); }
-.icon-outer.muted { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); }
 
-.progress-accent { background: linear-gradient(90deg,#1e90ff,#0ea5a6); }
+/* Glow effect for timeline dots */
+.dot-glow {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* ================================================= */
+/* ANIMATIONS (Optional for fluid feel) */
+/* ================================================= */
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-dropdown {
+  animation: fadeInScale 0.3s ease-out forwards;
+}
